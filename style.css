@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
@@ -129,8 +130,9 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
 }
+
+    /* ----- Responsive ----- */
 
 /* Hamburger Icon */
 .hamburger {

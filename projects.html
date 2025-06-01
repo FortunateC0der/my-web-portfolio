@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortunate Emmy - Projects</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="wrapper">
+    <!-- Header placeholder -->
+    <div id="include-header"></div>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Fortunate Emmy</div>
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
-    <!-- Hamburger Menu (Mobile only) -->
-    <div class="hamburger" id="hamburger">
-      ☰
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+    </script>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+        <div class="card">
+            <img src="images/project1.jpg" alt="Project 1">
+            <h3>Portfolio Website</h3>
+            <p>A fully responsive portfolio built with HTML & CSS.</p>
+        </div>
+        <div class="card">
+            <img src="images/project2.jpg" alt="Project 2">
+            <h3>Weather App</h3>
+            <p>JavaScript app that fetches real-time weather data from OpenWeatherMap API.</p>
+        </div>
+        </div>
+    </section>
+
+        <!-- Footer placeholder -->
+        <div id="include-footer"></div>
     </div>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-  </nav>
-</header>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="card">
-        <img src="images/project1.jpg" alt="Project 1">
-        <h3>Portfolio Website</h3>
-        <p>A fully responsive portfolio built with HTML & CSS.</p>
-      </div>
-      <div class="card">
-        <img src="images/project2.jpg" alt="Project 2">
-        <h3>Weather App</h3>
-        <p>JavaScript app that fetches real-time weather data from OpenWeatherMap API.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Fortunate Emmy. All rights reserved.</p>
-  </footer>
-
+    <script src="include.js"></script>
 </body>
+
 </html>

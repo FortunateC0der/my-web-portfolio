@@ -6,47 +6,32 @@
   <title>Fortunate Emmy - Contact</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <div class="wrapper">
+        <!-- Header placeholder -->
+        <div id="include-header"></div>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Fortunate Emmy</div>
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    <!-- Hamburger Menu (Mobile only) -->
-    <div class="hamburger" id="hamburger">
-      ☰
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+        </script>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        </section>
+
+        <!-- Footer placeholder -->
+        <div id="include-footer"></div>
     </div>
 
-    <!-- Navigation Links -->
-    <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-  </nav>
-</header>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-</script>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Fortunate Emmy. All rights reserved.</p>
-  </footer>
-
+  <script src="include.js"></script>
 </body>
+
 </html>

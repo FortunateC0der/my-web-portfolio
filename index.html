@@ -1,32 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortunate Emmy - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="wrapper">
-        <header>
-            <nav class="navbar">
-                <div class="logo">Fortunate Emmy</div>
-
-                <!-- Hamburger Menu (Mobile only) -->
-                <div class="hamburger" id="hamburger">
-                ☰
-                </div>
-
-                <!-- Navigation Links -->
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-
-            </nav>
-        </header>
+        <!-- Shared Header -->
+         <div id="include-header"></div>
 
         <script>
         const hamburger = document.getElementById('hamburger');
@@ -45,10 +30,12 @@
             <p>A Junior Software Developer passionate about building beautiful, functional websites.</p>
         </section>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Fortunate Emmy. All rights reserved.</p>
-        </footer>
+       <!-- Shared Footer -->
+        <div id="include-footer"></div>
+
+        <!-- Include Script -->
+        <script src="include.js"></script>
     </div>
 </body>
+
 </html>

@@ -111,7 +111,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 
 .home h2 {
   font-size: 1.5rem;
-  color: var(--highlight-color);
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -120,6 +120,41 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
   margin: 0 auto 1.5rem;
   font-size: 1.1rem;
 }
+
+.fun-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--highlight-color)
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--highlight-color), rgba(165, 42, 42, 0.664));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+  font-size: 1em;
+}
+
+/* Waving animation */
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
 
 /* Buttons */
 .home-buttons {
@@ -162,7 +197,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 /* About & Contact Sections */
 .about-page {
   padding: 2rem;
-  max-width: 900px;
+
   margin: 0 auto;
   background-color: var(--bg-color2);
 }

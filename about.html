@@ -10,27 +10,26 @@
 
 <body>
     <div class="wrapper">
-    <!-- Header placeholder -->
-    <div id="include-header"></div>
+        <!-- Header placeholder -->
+        <div id="include-header"></div>
 
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-    <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+        </script>
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-    </script>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I love coding, solving problems, and continuously learning. I specialize in front-end development using HTML, CSS, and JavaScript.</p>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>I love coding, solving problems, and continuously learning. I specialize in front-end development using HTML, CSS, and JavaScript.</p>
-    </section>
-
-    <!-- Footer placeholder -->
-    <div id="include-footer"></div>
+        <!-- Footer placeholder -->
+        <div id="include-footer"></div>
     </div>
 
     <script src="include.js"></script>

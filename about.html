@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortunate Emmy - About</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Devicon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
 <body>
@@ -31,12 +35,29 @@
 
       <section class="about-skills">
         <h2>Technical Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> Java, JavaScript, TypeScript, Python, C#, SQL</li>
-          <li><strong>Frameworks and Libraries:</strong> React, Spring Boot, .NET, Tailwind CSS</li>
-          <li><strong>Cloud and Tools:</strong> Microsoft Azure, Power BI, Git, GitHub, VS Code</li>
-          <li><strong>Methodologies:</strong> Agile, Scrum</li>
-        </ul>
+        <div class="skills-container">
+          <div class="dev-icons">
+            <!-- Languages -->
+            <i class="fab fa-java" title="Java"></i>
+             <i class="fab fa-python" title="Python"></i>
+             <i class="devicon-typescript-plain" title="TypeScript"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
+            <i class="devicon-csharp-plain" title="C#"></i>
+            <i class="fas fa-database" title="SQL"></i>
+            
+            <!-- Frameworks and Libraries -->
+            <i class="fab fa-react" title="React"></i>
+            <i class="devicon-dotnetcore-plain" title=".NET"></i>
+            <i class="fab fa-css3-alt" title="Tailwind CSS"></i>
+            
+            <!-- Cloud and Tools -->
+            <i class="devicon-azure-plain" title="Microsoft Azure"></i>
+            <i class="fab fa-git-alt" title="Git"></i>
+            <i class="fab fa-github" title="GitHub"></i>
+            <i class="fas fa-code" title="VS Code"></i>
+
+          </div>
+        </div>
       </section>
 
       <section class="about-experience">
@@ -79,6 +100,54 @@
     </div>
 
     <script src="include.js"></script>
+
+    <style>
+    .skills-container {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 1.5rem 0;
+    }
+
+    .dev-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      font-size: 2.2rem;
+    }
+
+    .dev-icons i {
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: #8892b0;
+    }
+
+    .dev-icons i:hover {
+      transform: translateY(-3px);
+      color: #64ffda;
+    }
+
+    .dev-icons i.devicon-typescript-plain,
+    .dev-icons i.devicon-csharp-plain,
+    .dev-icons i.devicon-dotnetcore-plain,
+    .dev-icons i.devicon-azure-plain {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .dev-icons {
+        gap: 1.5rem;
+        font-size: 1.8rem;
+      }
+      
+      .dev-icons i.devicon-typescript-plain,
+      .dev-icons i.devicon-csharp-plain,
+      .dev-icons i.devicon-dotnetcore-plain {
+        font-size: 1.8rem;
+      }
+    }
+    </style>
 </body>
 
 </html>

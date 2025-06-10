@@ -184,7 +184,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 /* About & Contact Sections */
 .about-page {
   padding: 2rem;
-
+  max-width: 1200px;
   margin: 0 auto;
   background-color: var(--bg-color2);
 }
@@ -207,6 +207,125 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
   margin-bottom: 2rem;
 }
 
+/* Code Editor Theme for About Page */
+.code-window {
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: 'Fira Code', 'Roboto Mono', monospace;
+}
+
+.window-header {
+  background: #2d2d2d;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #3d3d3d;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.window-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.window-button.close {
+  background: #ff5f56;
+}
+
+.window-button.minimize {
+  background: #ffbd2e;
+}
+
+.window-button.maximize {
+  background: #27c93f;
+}
+
+.window-title {
+  color: #808080;
+  font-size: 0.9rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.code-content {
+  padding: 1rem;
+  color: #d4d4d4;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.code-line {
+  display: flex;
+  min-height: 1.5em;
+  white-space: pre;
+}
+
+.line-number {
+  color: #858585;
+  padding-right: 1rem;
+  text-align: right;
+  min-width: 2.5em;
+  user-select: none;
+}
+
+.code-comment {
+  color: #6a9955;
+}
+
+.code-keyword {
+  color: #569cd6;
+}
+
+.code-string {
+  color: #ce9178;
+}
+
+.code-number {
+  color: #b5cea8;
+}
+
+.code-variable {
+  color: #9cdcfe;
+}
+
+.code-class {
+  color: #4ec9b0;
+}
+
+.code-indent {
+  color: #d4d4d4;
+  padding-left: 2em;
+}
+
+/* Hover effects */
+.code-line:hover {
+  background: #2a2d2e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 1rem;
+  }
+  
+  .code-content {
+    font-size: 0.85rem;
+  }
+  
+  .line-number {
+    min-width: 2em;
+  }
+}
 
 /* Projects Section */
 .projects {
@@ -350,4 +469,50 @@ footer {
   .nav-links.show {
     display: flex;
   }
+}
+
+/* Developer Icons Styling */
+.dev-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.dev-icons i {
+    font-size: 2.5rem;
+    color: #666;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dev-icons i:hover {
+    transform: translateY(-5px);
+    color: var(--primary-color, #007bff);
+}
+
+/* Specific icon colors */
+.dev-icons .fa-html5:hover {
+    color: #e34f26;
+}
+
+.dev-icons .fa-css3-alt:hover {
+    color: #264de4;
+}
+
+.dev-icons .fa-java:hover {
+    color: #007396;
+}
+
+.dev-icons .fa-react:hover {
+    color: #61dafb;
+}
+
+.dev-icons .fa-github:hover {
+    color: #333;
+}
+
+.dev-icons .fa-code:hover {
+    color: #007bff;
 }

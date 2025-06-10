@@ -179,7 +179,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 /* About Section */
 .about-page {
   padding: 2rem;
-  margin: 0 auto;
+  
   background-color: var(--bg-color2);
 
 }

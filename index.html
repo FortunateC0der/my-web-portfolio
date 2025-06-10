@@ -35,10 +35,14 @@
             <br>
             </h1>
 
-            <h2>Junior Software Developer</h2>
-            <p>I build web applications using HTML, CSS, JavaScript and React. I'm passionate about learning, solving real-world problems, as well as bringing ideas to life through clean and functional code.</p>
-            
-        
+            <p class="hero-description">I'm <strong>Fortunate Mothoana</strong>, I'm a curious and creative <strong class="accent-text">Junior Software Developer</strong> who loves building web applications. </p>
+            <p>
+                I enjoy turning tricky problems into smooth, user-friendly apps that work well across different devices.
+            </p>
+            <p>
+                I build with <strong class="highlight-text">HTML</strong>, <strong class="highlight-text">CSS</strong>, <strong class="highlight-text">JavaScript</strong>, and <strong class="highlight-text">React</strong>. Whether it's solving real-world problems or bringing cool ideas to life, I'm all about writing clean code and learning something new every day.
+            </p>
+
         <div class="hero-buttons">
   <a href="assets/FortunateCV.pdf" class="btn" target="_blank" rel="noopener noreferrer">Hire Me</a>
 
@@ -51,6 +55,48 @@
         <!-- Include Script -->
         <script src="include.js"></script>
     </div>
+
+<style>
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 0 1rem;
+}
+
+.hero-description strong {
+  color: var(--text-color);
+}
+
+.hero-description .accent-text {
+  color: var(--accent-color);
+}
+
+.hero-description + p {
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 0 1rem;
+}
+
+.hero-description + p + p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: 0 1rem;
+}
+
+.hero-description + p + p .highlight-text {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+</style>
 </body>
 
 </html>

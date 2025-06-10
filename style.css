@@ -8,10 +8,7 @@
   --highlight-color: #38BDF8;    /* Secondary pop color */
   --cta-color: #F43F5E;          /* Call-to-action buttons */
   --success-color: #4ADE80;      /* Forms, alerts */
-
-
   --font-main: 'Arial', sans-serif;
-
   --card-bg: #1E293B;
   --card-shadow: rgba(0, 0, 0, 0.3);
   --card-hover-shadow: rgba(0, 0, 0, 0.5);
@@ -179,11 +176,12 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
   color: var(--bg-color);
 }
 
-/* About & Contact Sections */
+/* About Section */
 .about-page {
   padding: 2rem;
   margin: 0 auto;
   background-color: var(--bg-color2);
+
 }
 
 .about-page h1,
@@ -204,14 +202,97 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
   margin-bottom: 2rem;
 }
 
-/* Remove unused code editor styles */
-/* .code-content, .code-line, .line-number, .code-comment, .code-keyword, 
-   .code-string, .code-number, .code-variable, .code-class, .code-indent, 
-   .code-line:hover { ... } */
+/* Developer Icons Styling */
+.dev-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.dev-icons i {
+  font-size: 2.5rem;
+  color: #666;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.dev-icons i:hover {
+  transform: translateY(-5px);
+}
+
+/* Brand Colors for Icons */
+/* Languages */
+.dev-icons .fa-html5:hover {
+  color: #E34F26;  /* HTML5 official color */
+}
+
+.dev-icons .fa-css3-alt:hover {
+  color: #264DE4;  /* CSS3 official color */
+}
+
+.dev-icons .fa-js:hover {
+  color: #F7DF1E;  /* JavaScript official color */
+}
+
+.dev-icons .fa-java:hover {
+  color: #007396;  /* Java official color */
+}
+
+.dev-icons .fa-python:hover {
+  color: #3776AB;  /* Python official color */
+}
+
+.dev-icons .devicon-typescript-plain:hover {
+  color: #3178C6;  /* TypeScript official color */
+}
+
+.dev-icons .devicon-csharp-plain:hover {
+  color: #68217A;  /* C# official color */
+}
+
+.dev-icons .fa-database:hover {
+  color: #336791;  /* SQL standard color */
+}
+
+/* Frameworks and Libraries */
+.dev-icons .fa-react:hover {
+  color: #61DAFB;  /* React official color */
+}
+
+.dev-icons .devicon-dotnetcore-plain:hover {
+  color: #512BD4;  /* .NET official color */
+}
+
+.dev-icons .fa-css3-alt:hover {
+  color: #38B2AC;  /* Tailwind CSS official color */
+}
+
+/* Cloud and Tools */
+.dev-icons .devicon-azure-plain-wordmark:hover {
+  color: #0078D4;  /* Microsoft Azure official color */
+}
+
+.dev-icons .fa-git-alt:hover {
+  color: #F05032;  /* Git official color */
+}
+
+.dev-icons .fa-github:hover {
+  color: #181717;  /* GitHub official color */
+}
+
+.dev-icons .devicon-vscode-plain:hover {
+  color: #007ACC;  /* VS Code official color */
+}
 
 @media (max-width: 768px) {
-  .about-page {
-    padding: 1rem;
+  .dev-icons {
+    gap: 1.5rem;
+  }
+  
+  .dev-icons i {
+    font-size: 2rem;
   }
 }
 
@@ -357,50 +438,4 @@ footer {
   .nav-links.show {
     display: flex;
   }
-}
-
-/* Developer Icons Styling */
-.dev-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.dev-icons i {
-    font-size: 2.5rem;
-    color: #666;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.dev-icons i:hover {
-    transform: translateY(-5px);
-    color: var(--primary-color, #007bff);
-}
-
-/* Specific icon colors */
-.dev-icons .fa-html5:hover {
-    color: #e34f26;
-}
-
-.dev-icons .fa-css3-alt:hover {
-    color: #264de4;
-}
-
-.dev-icons .fa-java:hover {
-    color: #007396;
-}
-
-.dev-icons .fa-react:hover {
-    color: #61dafb;
-}
-
-.dev-icons .fa-github:hover {
-    color: #333;
-}
-
-.dev-icons .fa-code:hover {
-    color: #007bff;
 }

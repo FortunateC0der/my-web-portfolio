@@ -363,16 +363,25 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 .contact-form label {
   margin-top: 1rem;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--highlight-color);
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  background: var(--bg-color);
-  border: 1px solid #475569;
-  border-radius: 4px;
-  color: var(--text-color);
+  background: var(--light-gray);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--bg-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.1);
 }
 
 .contact-form button {

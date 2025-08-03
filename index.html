@@ -36,12 +36,12 @@
             <br>
             </h1>
 
-            <p class="hero-description">I'm <strong>Fortunate Mothoana</strong>, I'm a curious and creative <strong class="accent-text">Junior Software Developer</strong> who loves building web applications. </p>
+            <p class="hero-description">I'm <strong>Fortunate Mothoana</strong>, I'm a curious and creative <strong class="accent-text">{ Junior Software Developer }</strong> who loves building web applications. </p>
             <p>
                 I enjoy turning tricky problems into smooth, user-friendly apps that work well across different devices.
             </p>
             <p>
-                I build with <strong class="highlight-text">HTML</strong>, <strong class="highlight-text">CSS</strong>, <strong class="highlight-text">JavaScript</strong>, and <strong class="highlight-text">React</strong>. Whether it's solving real-world problems or bringing cool ideas to life, I'm all about writing clean code and learning something new every day.
+                I build web apps with <strong class="highlight-text">{ HTML</strong>, <strong class="highlight-text">CSS</strong>, <strong class="highlight-text">JavaScript</strong>, <strong class="highlight-text">React Typescript</strong> & <strong class="highlight-text">Java Springboot }</strong>. Whether it's solving real-world problems or bringing cool ideas to life, I'm all about writing clean code and learning something new every day.
             </p>
 
         <div class="hero-buttons">
@@ -95,26 +95,14 @@
                 <div class="timeline">
                     <div class="timeline-item" data-year="2024">
                         <div class="timeline-content">
-                            <h3>IT Technician – Bongani Rainmaker</h3>
-                            <p>Provided tech support at a warehouse, installing hardware and software while troubleshooting issues without direct customer interaction.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-year="2023">
-                        <div class="timeline-content">
-                            <h3>Software Developer Intern – Zensar Technologies</h3>
+                            <h3>Software Developer Intern @ Zensar Technologies</h3>
                             <p>Worked on both internal and external projects, building features and debugging applications. I collaborated closely with Project Managers as well as Design Teams and was the only Junior outsourced developer on a key external project.</p>
                         </div>
                     </div>
                     <div class="timeline-item" data-year="2023">
                         <div class="timeline-content">
-                            <h3>Cloud Developer Trainee – Afrika Tikkun Services</h3>
+                            <h3>Cloud Developer Trainee @ Afrika Tikkun Services</h3>
                             <p>Completed hands-on labs and projects involving cloud fundamentals, Azure services and AI solutions.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-year="2022">
-                        <div class="timeline-content">
-                            <h3>Data Collector – Statistics South Africa</h3>
-                            <p>Engaged with people directly, collected data under pressure and resolved complaints professionally.</p>
                         </div>
                     </div>
                 </div>
@@ -126,32 +114,15 @@
             <div class="container">
                 <h2 class="section-title">Featured Projects</h2>
                 <div class="project-cards">
-                    <div class="card">
-                        <img src="images/project1.jpg" alt="Portfolio Website">
+                    <div class="card" onclick="openImagePopup('images/project1.png', 'Portfolio Website')">
+                        <img src="images/project1.png" alt="My Portfolio">
                         <h3>Portfolio Website</h3>
-                        <p>A fully responsive portfolio built with HTML & CSS, showcasing modern design principles and clean code structure.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                        <p>A fully responsive portfolio built with HTML & CSS.</p>
                     </div>
-                    <div class="card">
-                        <img src="images/project2.jpg" alt="Weather App">
-                        <h3>Weather App</h3>
-                        <p>JavaScript app that fetches real-time weather data from OpenWeatherMap API with dynamic UI updates.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="images/project3.jpg" alt="E-commerce Platform">
-                        <h3>E-commerce Platform</h3>
-                        <p>Full-stack React application with Node.js backend, featuring user authentication and payment integration.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Live</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    <div class="card" onclick="openImagePopup('images/project2.png', 'Matriculates & Graduates Web App')">
+                        <img src="images/project2.png" alt="NextU">
+                        <h3>Matriculates & Graduates Web App</h3>
+                        <p>Java Springboot app that fetches real-time university data from MySQL database.</p>
                     </div>
                 </div>
             </div>
@@ -208,6 +179,15 @@
 
        <!-- Shared Footer -->
         <div id="include-footer"></div>
+
+        <!-- Image Popup Modal -->
+        <div id="imagePopup" class="image-popup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+                <img id="popupImage" src="" alt="">
+                <h3 id="popupTitle"></h3>
+            </div>
+        </div>
 
         <!-- Include Script -->
         <script src="include.js"></script>
@@ -344,6 +324,11 @@
   margin-top: 2rem;
   position: relative;
   width: 45%;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -379,7 +364,8 @@
 }
 
 .card {
-  background: var(--bg-color);
+  background: var(--light-gray);
+  border: 2px solid var(--accent-color);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px var(--card-shadow);
@@ -409,22 +395,7 @@
   line-height: 1.6;
 }
 
-.project-links {
-  padding: 0 1.5rem 1.5rem;
-  display: flex;
-  gap: 1rem;
-}
 
-.project-link {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.project-link:hover {
-  color: var(--accent-hover);
-}
 
 /* Contact Section */
 .contact-section {
@@ -548,6 +519,103 @@
     font-size: 2rem;
   }
 }
+
+/* Image Popup Styles */
+.image-popup {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+}
+
+.popup-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.popup-content img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content h3 {
+  color: var(--text-color);
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.close-popup {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #f1f1f1;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-popup:hover {
+  color: var(--accent-color);
+}
+
+/* Make cards clickable */
+.card {
+  cursor: pointer;
+}
+</style>
+
+<script>
+function openImagePopup(imageSrc, title) {
+  const popup = document.getElementById('imagePopup');
+  const popupImage = document.getElementById('popupImage');
+  const popupTitle = document.getElementById('popupTitle');
+  
+  popupImage.src = imageSrc;
+  popupTitle.textContent = title;
+  popup.style.display = 'block';
+  
+  // Prevent body scroll when popup is open
+  document.body.style.overflow = 'hidden';
+}
+
+function closeImagePopup() {
+  const popup = document.getElementById('imagePopup');
+  popup.style.display = 'none';
+  
+  // Restore body scroll
+  document.body.style.overflow = 'auto';
+}
+
+// Close popup when clicking outside the image
+document.getElementById('imagePopup').addEventListener('click', function(e) {
+  if (e.target === this) {
+    closeImagePopup();
+  }
+});
+
+// Close popup with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeImagePopup();
+  }
+});
+</script>
 </style>
 </body>
 

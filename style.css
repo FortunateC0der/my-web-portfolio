@@ -313,6 +313,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 
 .card {
   background: var(--card-bg);
+  border: 2px solid var(--accent-color);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px var(--card-shadow);
@@ -698,7 +699,7 @@ footer {
   }
   
   .project-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
   
   .section-title {

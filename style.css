@@ -128,7 +128,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, var(--highlight-color), rgba(165, 42, 42, 0.664));
+  background: linear-gradient(90deg, var(--highlight-color), rgba(161, 42, 165, 0.664));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

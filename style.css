@@ -752,4 +752,5 @@ header {
   z-index: 1100;
   background: var(--light-gray);
   transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(101, 6, 149, 0.1);
 }

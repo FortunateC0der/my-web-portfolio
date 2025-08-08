@@ -744,3 +744,12 @@ footer {
     display: flex;
   }
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1100;
+  background: var(--light-gray);
+  transition: transform 0.3s ease-in-out;
+}

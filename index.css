@@ -1,11 +1,17 @@
 /* ========== Hero Description Styles ========== */
-.hero-description {
+.hero-description,
+.hero-description + p,
+.hero-description + p + p {
   max-width: 800px;
   margin: 0 auto 1rem;
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-color);
   padding: 0 1rem;
+}
+
+.hero-description + p + p {
+  margin-bottom: 2rem;
 }
 
 .hero-description strong {
@@ -16,28 +22,11 @@
   color: var(--accent-color);
 }
 
-.hero-description + p {
-  max-width: 800px;
-  margin: 0 auto 1rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  padding: 0 1rem;
-}
-
-.hero-description + p + p {
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  padding: 0 1rem;
-}
-
 .hero-description + p + p .highlight-text {
   color: var(--highlight-color);
   font-weight: 600;
 }
+
 
 /* ========== Container and Section Styles ========== */
 .container {

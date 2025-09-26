@@ -297,7 +297,9 @@ footer {
 
 /* ========== About Section ========== */
 .about-section {
-  padding: 5rem 0;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--bright-violet);
   background-color: var(--light-gray);
 }
 .about-content {
@@ -307,43 +309,37 @@ footer {
   align-items: start;
 }
 .about-text p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: var(--navy);
 }
+
+/* Skills Section */
 .skills-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  padding: 4rem 2rem;
   color: var(--bright-violet);
+  background-color: var(--navy);
+}
+.dev-icons i {
+  font-size: 4rem;
+  margin: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Education Section */
-.education-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
+.dev-icons i:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: var(--bright-violet); /* Optional: highlight on hover */
 }
-.education-card {
-  background: var(--navy);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-.education-card:hover { transform: translateY(-5px); }
-.card-icon {
-  font-size: 2.5rem;
-  color: var(--bright-violet);
-  margin-bottom: 1rem;
-}
+
 
 /* Experience Section */
 .experience-section {
   padding: 5rem 0;
-  background-color: var(--navy);
+  background-color: var(--light-gray);
+  text-align: center;
+  color: var(--bright-violet);
 }
 .timeline {
   position: relative;
@@ -399,11 +395,62 @@ footer {
   line-height: 1.6;
 }
 
+/* Education Section */
+.education-section {
+  text-align: center;
+  padding: 2rem 2rem; /* Reduced top/bottom padding from 4rem to 2rem */
+  color: var(--navy);
+  background-color: var(--navy);
+}
+
+/* Education heading */
+.education-section h2 {
+  font-size: 2rem; /* Make heading large */
+  margin: 1rem 0; /* Reduce top and bottom margin */
+  font-weight: bold;
+  color: var(--bright-violet);
+}
+.education-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--bright-violet);
+}
+
+.education-cards {
+  gap: 6rem;
+  margin: 2rem 0; 
+  border-radius: 9px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.education-card {
+  background: var(--light-gray);
+  border-color: var(--bright-violet);
+  padding: 2rem;
+  border-radius: 6px;
+  transition: transform 0.5s ease;
+  text-align: center;
+  min-width: 250px; /* Prevents cards from shrinking too small */
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 4rem;
+  color: var(--bright-violet);
+  margin-bottom: 2rem;
+}
+
+
 /* Projects Section */
 .projects {
-  padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--navy);
+  padding: 4rem 2rem;
+  color: var(--bright-violet);
+  background-color: var(--light-gray);
 }
 .project-cards {
   display: grid;
@@ -414,8 +461,10 @@ footer {
 
 /* Contact Section */
 .contact-section {
-  padding: 5rem 0;
-  background-color: var(--light-gray);
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--bright-violet);
+  background-color: var(--navy);
 }
 .contact-content {
   display: grid;

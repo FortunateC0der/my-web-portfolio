@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fortunate Mothoana - Portfolio</title>
+  <title>Fortunate Emmy - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,259 +13,279 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Shared Header -->
-         <div id="include-header"></div>
+  <div class="wrapper">
 
-        <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+    <!-- Shared Header -->
+    <div id="include-header"></div>
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-        </script>
+    <!-- Hero Section -->
+    <section id="home" class="home">
+      <img src="images/profile.jpg" alt="Fortunate Emmy" class="profile-pic" />
+      <h1 class="fun-heading">
+        Hi <span class="wave">👋🏼</span>
+        <span class="gradient-text">Welcome To My Profile</span>
+        <br><br>
+      </h1>
 
-        <!-- Hero Section -->
-        <section id="home" class="home">
-            <img src="images/profile.jpg" alt="Fortunate Emmy" class="profile-pic"/>
-           <h1 class="fun-heading">
-            Hi <span class="wave">👋🏼</span>
-            <span class="gradient-text">Welcome To My Profile</span>
-            <br>
-            <br>
-            </h1>
+      <p class="hero-description">
+        I'm <strong>Fortunate Mothoana</strong>, I'm a curious and creative
+        <strong class="accent-text">{ Junior Software Developer }</strong>
+        who loves building web applications.
+      </p>
+      <p>
+        I enjoy turning tricky problems into smooth, user-friendly apps that work well across different devices.
+      </p>
+      <p>
+        I build web apps with <strong class="highlight-text">{ HTML</strong>,
+        <strong class="highlight-text">CSS</strong>,
+        <strong class="highlight-text">JavaScript</strong>,
+        <strong class="highlight-text">React Typescript</strong> &
+        <strong class="highlight-text">Java Springboot }</strong>. Whether it's solving real-world problems or bringing
+        cool ideas to life, I'm all about writing clean code and learning something new every day.
+      </p>
 
-            <p class="hero-description">I'm <strong>Fortunate Mothoana</strong>, I'm a curious and creative <strong class="accent-text">{ Junior Software Developer }</strong> who loves building web applications. </p>
+      <div class="home-buttons">
+        <a href="assets/FortunateCV.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
+    </section>
+
+    <!-- About & Skills Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
             <p>
-                I enjoy turning tricky problems into smooth, user-friendly apps that work well across different devices.
+              I'm a passionate Junior Software Developer with a strong foundation in both front-end and back-end
+              development. My journey in tech started with curiosity and has evolved into a commitment to creating
+              meaningful digital solutions.
             </p>
             <p>
-                I build web apps with <strong class="highlight-text">{ HTML</strong>, <strong class="highlight-text">CSS</strong>, <strong class="highlight-text">JavaScript</strong>, <strong class="highlight-text">React Typescript</strong> & <strong class="highlight-text">Java Springboot }</strong>. Whether it's solving real-world problems or bringing cool ideas to life, I'm all about writing clean code and learning something new every day.
+              I believe in continuous learning and staying updated with the latest technologies. When I'm not coding,
+              you can find me exploring new frameworks, contributing to open-source projects, or mentoring other
+              developers.
             </p>
+          </div>
 
-        <div class="hero-buttons">
-            <a href="assets/FortunateCV.pdf" class="btn" target="_blank" rel="noopener noreferrer">Download CV</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <!-- Animations -->
+          <div class="floating-elements">
+            <div class="floating-tag">&lt;code&gt;</div>
+            <div class="floating-tag">&lt;/code&gt;</div>
+            <div class="floating-bracket">{</div>
+            <div class="floating-bracket">}</div>
+            <div class="floating-dot">;</div>
+          </div>
+
+          <div class="skills-section">
+            <h3>Technical Skills</h3>
+            <div class="dev-icons">
+              <!-- Languages -->
+              <i class="fab fa-java" title="Java"></i>
+              <i class="fab fa-html5" title="HTML5"></i>
+              <i class="fab fa-python" title="Python"></i>
+              <i class="fab fa-js" title="JavaScript"></i>
+              <i class="devicon-typescript-plain" title="TypeScript"></i>
+              <i class="devicon-csharp-plain" title="C#"></i>
+              <i class="fas fa-database" title="SQL"></i>
+
+              <!-- Frameworks and Libraries -->
+              <i class="fab fa-react" title="React"></i>
+              <i class="devicon-dotnetcore-plain" title=".NET"></i>
+              <i class="fab fa-css3-alt" title="Tailwind CSS"></i>
+
+              <!-- Cloud and Tools -->
+              <i class="devicon-azure-plain-wordmark" title="Microsoft Azure"></i>
+              <i class="fab fa-git-alt" title="Git"></i>
+              <i class="fab fa-github" title="GitHub"></i>
+              <i class="devicon-vscode-plain" title="VS Code"></i>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="education-section">
+            <h3>Education</h3>
+            <div class="education-content">
+              <div class="education-cards">
+                <div class="education-card">
+                  <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                  <h3>Certified Java Developer</h3>
+                  <p>GoFourth Institute of Technology, 2024</p>
+                </div>
+                <div class="education-card">
+                  <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                  <h3>Diploma in IT: Business Applications</h3>
+                  <p>Tshwane University of Technology, 2021</p>
+                </div>
+                <div class="education-card">
+                  <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                  <h3>Microsoft Certifications</h3>
+                  <p>
+                    Azure AI Engineer Associate (AI-102),
+                    Developing Solutions for Microsoft Azure (AZ-204),
+                    Power Platform Fundamentals (PL-900)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        </section>
+      </div>
+    </section>
 
-        <!-- About & Skills Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a passionate Junior Software Developer with a strong foundation in both front-end and back-end development. My journey in tech started with curiosity and has evolved into a commitment to creating meaningful digital solutions.</p>
-                        <p>I believe in continuous learning and staying updated with the latest technologies. When I'm not coding, you can find me exploring new frameworks, contributing to open-source projects, or mentoring other developers.</p>
-                    </div>
-                    <!-- Animations -->
-                    <div class="floating-elements">
-                        <div class="floating-tag">&lt;code&gt;</div>
-                        <div class="floating-tag">&lt;/code&gt;</div>
-                        <div class="floating-bracket">{</div>
-                        <div class="floating-bracket">}</div>
-                        <div class="floating-dot">;</div>
-                    </div>
-
-                    <div class="skills-section">
-                        <h3>Technical Skills</h3>
-                        <div class="dev-icons">
-                            <!-- Languages -->
-                            <i class="fab fa-java" title="Java"></i>
-                            <i class="fab fa-html5" title="HTML5"></i>
-                            <i class="fab fa-python" title="Python"></i>
-                            <i class="fab fa-js" title="JavaScript"></i>
-                            <i class="devicon-typescript-plain" title="TypeScript"></i>
-                            <i class="devicon-csharp-plain" title="C#"></i>
-                            <i class="fas fa-database" title="SQL"></i>
-                            
-                            <!-- Frameworks and Libraries -->
-                            <i class="fab fa-react" title="React"></i>
-                            <i class="devicon-dotnetcore-plain" title=".NET"></i>
-                            <i class="fab fa-css3-alt" title="Tailwind CSS"></i>
-                            
-                            <!-- Cloud and Tools -->
-                            <i class="devicon-azure-plain-wordmark" title="Microsoft Azure"></i>
-                            <i class="fab fa-git-alt" title="Git"></i>
-                            <i class="fab fa-github" title="GitHub"></i>
-                            <i class="devicon-vscode-plain" title="VS Code"></i>
-                        </div>
-                    </div>
-                    <!-- Education -->
-                    <div class="education-section">
-                        <h3>Education</h3>
-                        <div class="education-content">
-                          <div class="education-cards">
-                            <div class="education-card">
-                              <div class="card-icon"><i class="fas fa-certificate"></i></div>
-                              <h3>Certified Java Developer</h3>
-                              <p>GoFourth Institute of Technology, 2024</p>
-                            </div>
-                            <div class="education-card">
-                              <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-                              <h3>Diploma in IT: Business Applications</h3>
-                              <p>Tshwane University of Technology, 2021</p>
-                            </div>
-                            <div class="education-card">
-                              <div class="card-icon"><i class="fas fa-cloud"></i></div>
-                              <h3>Microsoft Certifications</h3>
-                              <p>
-                                Azure AI Engineer Associate (AI-102), 
-                                Developing Solutions for Microsoft Azure (AZ-204), 
-                                Power Platform Fundamentals (PL-900) 
-                              </p>
-                            
-                            </div>
-
-                </div>
-                
-                
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-content">
+              <h3>Software Developer Intern @ Zensar Technologies</h3>
+              <p>
+                Worked on both internal and external projects, building features and debugging applications. I
+                collaborated closely with Project Managers as well as Design Teams and was the only Junior outsourced
+                developer on a key external project.
+              </p>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="experience-section">
-            <div class="container">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item" data-year="2024">
-                        <div class="timeline-content">
-                            <h3>Software Developer Intern @ Zensar Technologies</h3>
-                            <p>Worked on both internal and external projects, building features and debugging applications. I collaborated closely with Project Managers as well as Design Teams and was the only Junior outsourced developer on a key external project.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-year="2023">
-                        <div class="timeline-content">
-                            <h3>Cloud Developer Trainee @ Afrika Tikkun Services</h3>
-                            <p>Completed hands-on labs and projects involving cloud fundamentals, Azure services and AI solutions.</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="timeline-item" data-year="2023">
+            <div class="timeline-content">
+              <h3>Cloud Developer Trainee @ Afrika Tikkun Services</h3>
+              <p>
+                Completed hands-on labs and projects involving cloud fundamentals, Azure services and AI solutions.
+              </p>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="project-cards">
-                    <div class="card" onclick="openImagePopup('images/project1.png', 'Portfolio Website')">
-                        <img src="images/project1.png" alt="My Portfolio">
-                        <h3>Portfolio Website</h3>
-                        <p>A fully responsive portfolio built with HTML & CSS.</p>
-                    </div>
-                    <div class="card" onclick="openImagePopup('images/project2.png', 'Matriculates & Graduates Web App')">
-                        <img src="images/project2.png" alt="NextU">
-                        <h3>Matriculates & Graduates Web App</h3>
-                        <p>Java Springboot app that fetches real-time university data from MySQL database.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Let's work together!</h3>
-                        <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out.</p>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>fortunate.mothoana@email.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+27 74 372 3351</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Gauteng, South Africa</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <form action="https://formspree.io/f/mgvywdey" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        
-                        <!-- Optional: Add a honeypot field for spam protection -->
-                        <input type="text" name="_gotcha" style="display:none" />
-                        
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-       <!-- Shared Footer -->
-        <div id="include-footer"></div>
-
-        <!-- Image Popup Modal -->
-        <div id="imagePopup" class="image-popup">
-            <div class="popup-content">
-                <span class="close-popup" onclick="closeImagePopup()">&times;</span>
-                <img id="popupImage" src="" alt="">
-                <h3 id="popupTitle"></h3>
-            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Include Script -->
-        <script src="include.js"></script>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-cards">
+          <div class="card" onclick="openImagePopup('images/project1.png', 'Portfolio Website')">
+            <img src="images/project1.png" alt="My Portfolio">
+            <h3>Portfolio Website</h3>
+            <p>A fully responsive portfolio built with HTML & CSS.</p>
+          </div>
+          <div class="card" onclick="openImagePopup('images/project2.png', 'Matriculates & Graduates Web App')">
+            <img src="images/project2.png" alt="NextU">
+            <h3>Matriculates & Graduates Web App</h3>
+            <p>Java Springboot app that fetches real-time university data from MySQL database.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <h3>Let's work together!</h3>
+            <p style="color: var(--navy);">
+              I'm always interested in new opportunities and exciting projects. Whether you have a question or just want
+              to say hi, feel free to reach out.
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>fortunate.emmy@email.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>+27 74 222 33333</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Gauteng, South Africa</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/mgvywdey" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <!-- Optional: Add a honeypot field for spam protection -->
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shared Footer -->
+    <div id="include-footer"></div>
+
+    <!-- Image Popup Modal -->
+    <div id="imagePopup" class="image-popup">
+      <div class="popup-content">
+        <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+        <img id="popupImage" src="" alt="">
+        <h3 id="popupTitle"></h3>
+      </div>
     </div>
 
-<script>
-function openImagePopup(imageSrc, title) {
-  const popup = document.getElementById('imagePopup');
-  const popupImage = document.getElementById('popupImage');
-  const popupTitle = document.getElementById('popupTitle');
-  
-  popupImage.src = imageSrc;
-  popupTitle.textContent = title;
-  popup.style.display = 'block';
-  
-  // Prevent body scroll when popup is open
-  document.body.style.overflow = 'hidden';
-}
+  </div>
 
-function closeImagePopup() {
-  const popup = document.getElementById('imagePopup');
-  popup.style.display = 'none';
-  
-  // Restore body scroll
-  document.body.style.overflow = 'auto';
-}
+  <!-- Include Script -->
+  <script src="include.js"></script>
 
-// Close popup when clicking outside the image
-document.getElementById('imagePopup').addEventListener('click', function(e) {
-  if (e.target === this) {
-    closeImagePopup();
-  }
-});
+  <script>
+    function openImagePopup(imageSrc, title) {
+      const popup = document.getElementById('imagePopup');
+      const popupImage = document.getElementById('popupImage');
+      const popupTitle = document.getElementById('popupTitle');
 
-// Close popup with Escape key
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    closeImagePopup();
-  }
-});
-</script>
-</style>
+      popupImage.src = imageSrc;
+      popupTitle.textContent = title;
+      popup.style.display = 'flex';
+
+      // Prevent body scroll when popup is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImagePopup() {
+      const popup = document.getElementById('imagePopup');
+      popup.style.display = 'none';
+
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close popup when clicking outside the image
+    document.getElementById('imagePopup').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeImagePopup();
+      }
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        closeImagePopup();
+      }
+    });
+  </script>
+
 </body>
 
 </html>

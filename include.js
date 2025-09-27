@@ -32,4 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       document.getElementById("include-footer").innerHTML = data;
     });
+
+  // Skill icon click handling
+  const skillIcons = document.querySelectorAll('.dev-icons i');
+
+  skillIcons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      // Remove 'clicked' class from all other icons
+      skillIcons.forEach(i => i.classList.remove('clicked'));
+      
+      // Add 'clicked' class to the clicked icon
+      icon.classList.add('clicked');
+    });
+  });
 });

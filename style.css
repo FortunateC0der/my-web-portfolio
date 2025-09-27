@@ -304,8 +304,8 @@ footer {
 }
 .about-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  background-color: #F43F5E;
   align-items: start;
 }
 .about-text p {
@@ -315,26 +315,85 @@ footer {
   color: var(--navy);
 }
 
-/* Skills Section */
-.skills-section h3 {
+/* ========== Skills Section ========== */
+.skills-section {
   text-align: center;
   padding: 4rem 2rem;
   color: var(--bright-violet);
   background-color: var(--navy);
 }
+
+/* Container for icons */
+.dev-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Icons */
 .dev-icons i {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 1rem;
+  cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
+  position: relative;
+  display: inline-block;
 }
 
+/* Hover scale */
 .dev-icons i:hover {
-  transform: scale(1.2); /* Slightly enlarge on hover */
-  color: var(--bright-violet); /* Optional: highlight on hover */
+  transform: scale(1.2);
+}
+
+/* Clicked effect: move up */
+.dev-icons i.clicked {
+  transform: translateY(-10px) scale(1.2);
+}
+
+/* Tech-specific colors using classes */
+.dev-icons i.fab.fa-java { color: #007396; }
+.dev-icons i.fab.fa-html5 { color: #E34F26; }
+.dev-icons i.fab.fa-python {
+  background: linear-gradient(
+    145deg,#306998 39%, #FFD43B 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
 }
 
 
-/* Experience Section */
+.dev-icons i.fab.fa-js { color: #F7DF1E; }
+.dev-icons i.devicon-typescript-plain { color: #3178C6; }
+.dev-icons i.devicon-csharp-plain { color: #9B4993; }
+.dev-icons i.fas.fa-database { color: #CC2927; }
+.dev-icons i.fab.fa-react { color: #61DAFB; }
+.dev-icons i.devicon-dotnetcore-plain { color: #512BD4; }
+.dev-icons i.fab.fa-css3-alt { color: #1572B6; }
+.dev-icons i.devicon-azure-plain-wordmark { color: #008AD6; }
+.dev-icons i.fab.fa-git-alt { color: #F05032; }
+.dev-icons i.fab.fa-github { color: #181717; }
+.dev-icons i.devicon-vscode-plain { color: #0078D7; }
+
+/* Tech name label */
+.dev-icons i::after {
+  content: attr(title); 
+  display: block;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+/* Show name when clicked */
+.dev-icons i.clicked::after {
+  opacity: 1;
+}
+
+/* ========== Experience Section ========== */
 .experience-section {
   padding: 5rem 0;
   background-color: var(--light-gray);
@@ -462,14 +521,14 @@ footer {
 /* Contact Section */
 .contact-section {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   color: var(--bright-violet);
   background-color: var(--navy);
 }
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 8rem;
   align-items: start;
 }
 .contact-info h3 {

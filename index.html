@@ -19,7 +19,7 @@
     <div id="include-header"></div>
 
     <!-- Hero Section -->
-    <section id="home" class="home">
+    <section id="home" class="home main-section">
       <img src="images/profile.jpg" alt="Fortunate Emmy" class="profile-pic" />
       <h1 class="fun-heading">
         Hi <span class="wave">👋🏼</span>
@@ -51,7 +51,7 @@
     </section>
 
     <!-- About Me Section -->
-    <section id="about" class="about-section">
+    <section id="about" class="about-section main-section">
       <div class="container">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
@@ -68,10 +68,10 @@
             </p>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section main-section">
           <h2 class="section-title">Technical Skills</h2>
             <div class="dev-icons">
               <!-- Languages -->
@@ -106,7 +106,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience-section">
+    <section id="experience" class="experience-section main-section">
       <div class="container">
         <h2 class="section-title">Experience</h2>
         <div class="timeline">
@@ -133,7 +133,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education-section">
+    <section id="education" class="education-section main-section">
           <!-- Education -->
           <div class="education-section">
             <h2 class="section-title">Education</h2>
@@ -167,7 +167,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects main-section">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
         <div class="project-cards">
@@ -186,7 +186,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section main-section">
       <div class="container">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-content">
@@ -198,7 +198,7 @@
             <div class="contact-details">
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
-                <span>emmy@email.com</span>
+                <span>fortunate.emmy@email.com</span>
               </div>
               <div class="contact-item">
                 <i class="fas fa-phone"></i>
@@ -289,6 +289,44 @@
       }
     });
   </script>
+
+  <script>
+const sections = document.querySelectorAll('.main-section');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+// Function to show only a specific section (except home)
+function showSection(id) {
+  if (id === 'home') {
+    // Show all sections on home
+    sections.forEach(sec => sec.style.display = 'block');
+  } else {
+    // Hide all sections except the selected one
+    sections.forEach(sec => {
+      sec.style.display = sec.id === id ? 'block' : 'none';
+    });
+  }
+}
+
+// Initial load
+const hash = location.hash.slice(1);
+showSection(hash || 'home');
+
+// Handle clicks on nav links
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href').slice(1);
+    showSection(targetId);
+    e.preventDefault(); // prevent default anchor scrolling
+    history.pushState(null, '', `#${targetId}`); // update URL
+  });
+});
+
+// Handle browser back/forward buttons
+window.addEventListener('popstate', () => {
+  const hash = location.hash.slice(1);
+  showSection(hash || 'home');
+});
+</script>
 
 </body>
 

@@ -1,4 +1,4 @@
-/* ========== Global Variables ========== */
+/* ========== Global Colors ========== */
 :root {
   --font-main: 'Arial', sans-serif;
   --navy: #132F4C;           /* Background Color &  Hover/focus state */
@@ -25,13 +25,15 @@ html, body {
   font-family: var(--font-main);
   background-color: var(--navy);
   color: var(--light-gray);
+  scroll-behavior: smooth;
 }
 
-/* Section Animation */
+/* ========== Section Animation ========== */
 section > * {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out forwards;
+  scroll-margin-top: 60px;
 }
 
 section > *:nth-child(2) { animation-delay: 0.2s; }
@@ -44,7 +46,7 @@ section > *:nth-child(3) { animation-delay: 0.4s; }
   }
 }
 
-/* Utility Classes */
+/* ========== Utility Classes ========== */
 .text-center { text-align: center; }
 .mt-4 { margin-top: 1rem; }
 .btn-rounded { border-radius: 9999px; }
@@ -91,7 +93,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -99,12 +100,21 @@ header {
 }
 .nav-links a {
   color: var(--navy);
+  text-decoration: none;
   transition: color 0.3s ease;
   
 }
 .nav-links a:hover {
   color: var(--bright-blue);
 }
+.nav-links a.active {
+  color: var(--bright-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--bright-blue);
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px; /* optional, makes it bolder */
+}
+
 
 /* Buttons */
 .home-buttons {
@@ -113,7 +123,6 @@ header {
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -125,12 +134,10 @@ header {
   transition: all 0.3s ease;
   font-weight: 500;
 }
-
 .btn:hover {
   background-color: var(--navy);
   color: var(--bright-violet);
 }
-
 /* Secondary button */
 .btn-secondary {
   background-color: transparent;
@@ -179,10 +186,21 @@ footer {
   position: sticky;
 }
 
-/* Hero Section */
+/* ========== Main Section ==========*/
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: center;     /* centers content horizontally */
+  min-height: 100vh;       /* full viewport height */
+  padding: 0 2rem;         /* optional horizontal padding */
+  box-sizing: border-box;
+}
+
+/* ========== Hero Section ==========*/
 .home {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   background-color: var(--navy);
 }
 .profile-pic {
@@ -265,7 +283,7 @@ footer {
   100% { transform: rotate(0deg); }
 }
 
-/* Floating Elements (from first stylesheet) */
+/* Floating Elements */
 .floating-elements {
   position: absolute;
   width: 100%;
@@ -303,10 +321,9 @@ footer {
   background-color: var(--light-gray);
 }
 .about-content {
-  display: grid;
-  gap: 4rem;
-  background-color: #F43F5E;
-  align-items: start;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
 }
 .about-text p {
   font-size: 1.2rem;

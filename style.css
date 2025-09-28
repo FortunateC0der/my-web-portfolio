@@ -15,7 +15,6 @@
 /* ========== Base Reset ========== */
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -193,7 +192,6 @@ footer {
   justify-content: center; /* centers content vertically */
   align-items: center;     /* centers content horizontally */
   min-height: 100vh;       /* full viewport height */
-  padding: 0 2rem;         /* optional horizontal padding */
   box-sizing: border-box;
 }
 
@@ -315,17 +313,25 @@ footer {
 
 /* ========== About Section ========== */
 .about-section {
+  margin-top: 0;
+  padding-top: 0;
   text-align: center;
   color: var(--bright-purple);
-  background-color: yellow;
+  background-color: var(--light-gray);
   position: relative;
-  margin: 0;
+}
+/* Style the title */
+.about-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--bright-purple);
+  text-align: center;
+  line-height: 1.2;
 }
 .about-content {
   max-width: 600px;
   margin: 0 auto 2rem;
   font-size: 1.1rem;
-  background-color: red;
 }
 .about-text p {
   font-size: 1.2rem;
@@ -333,7 +339,6 @@ footer {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--navy);
-  background-color: #4ADE80;
 }
 
 /* Toggle Arrow */
@@ -587,7 +592,7 @@ footer {
 
 /* ========== Experience Section ========== */
 .experience-section {
-  padding: 5rem 0;
+  padding: 0;
   background-color: var(--light-gray);
   text-align: center;
   color: var(--bright-purple);
@@ -1024,9 +1029,8 @@ footer {
 /* Projects Section */
 .projects {
   text-align: center;
-  padding: 4rem 2rem;
   color: var(--bright-purple);
-  background-color: var(--light-gray);
+  background-color: var(--navy);
 }
 .project-cards {
   display: grid;
@@ -1038,9 +1042,8 @@ footer {
 /* Contact Section */
 .contact-section {
   text-align: center;
-  padding: 2rem 2rem;
   color: var(--bright-purple);
-  background-color: var(--navy);
+  background-color: var(--light-gray);
 }
 .contact-content {
   display: grid;
@@ -1057,7 +1060,7 @@ footer {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: var(--light-gray);
+  color: var(--navy);
 }
 .contact-details {
   display: flex;
@@ -1068,7 +1071,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: var(--light-gray);
+  color: var(--navy);
 }
 .contact-item i {
   color: var(--bright-purple);
@@ -1094,7 +1097,7 @@ footer {
   padding: 1rem;
   border: 2px solid var(--bright-purple);
   border-radius: 8px;
-  background: var(--light-gray);
+  background: rgb(218, 218, 250);
   color: var(--navy);
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;

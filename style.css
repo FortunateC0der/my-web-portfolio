@@ -116,7 +116,6 @@ header {
   text-decoration-thickness: 2px; /* optional, makes it bolder */
 }
 
-
 /* Buttons */
 .home-buttons {
   display: flex;
@@ -317,40 +316,36 @@ footer {
 /* ========== About Section ========== */
 .about-section {
   text-align: center;
-  padding: 2rem 2rem;
   color: var(--bright-purple);
-  background-color: var(--light-gray);
-  margin-bottom: 0;
-  margin-top: 0;
+  background-color: yellow;
   position: relative;
+  margin: 0;
 }
-
 .about-content {
   max-width: 600px;
   margin: 0 auto 2rem;
   font-size: 1.1rem;
+  background-color: red;
 }
-
 .about-text p {
   font-size: 1.2rem;
   line-height: 1.8;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: var(--navy);
+  background-color: #4ADE80;
 }
 
-/* Education Toggle Arrow */
+/* Toggle Arrow */
 .education-toggle {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .education-toggle:hover {
   transform: translateY(-2px);
 }
-
 .arrow-container {
   display: flex;
   flex-direction: column;
@@ -364,7 +359,6 @@ footer {
   position: relative;
   overflow: hidden;
 }
-
 .arrow-container::before {
   content: '';
   position: absolute;
@@ -375,19 +369,15 @@ footer {
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
 }
-
 .arrow-container:hover::before {
   left: 100%;
 }
-
 .arrow-container:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 48px rgba(192, 132, 252, 0.4);
 }
 
 .arrow-icon {
-  width: 50px;
-  height: 50px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
@@ -395,15 +385,12 @@ footer {
   justify-content: center;
   transition: all 0.3s ease;
 }
-
 .arrow-icon i {
   font-size: 1.5rem;
   color: var(--navy);
   transition: transform 0.3s ease;
 }
-
 .arrow-text {
-  font-size: 1rem;
   font-weight: 600;
   color: var(--navy);
   text-transform: uppercase;
@@ -480,17 +467,13 @@ footer {
   }
 }
 
-/* Education Subsection */
+/* ========== Education Subsection ========== */
 .education-subsection {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
   margin-top: 2rem;
-  background: linear-gradient(135deg, var(--navy) 0%, #1a2332 100%);
-  border-radius: 20px;
   position: relative;
 }
-
 .education-subsection::before {
   content: '';
   position: absolute;
@@ -498,23 +481,15 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(192, 132, 252, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
-  border-radius: 20px;
   pointer-events: none;
 }
-
 .subsection-title {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin: 2rem 0 3rem;
   color: var(--bright-purple);
   text-align: center;
-  position: relative;
-  z-index: 2;
 }
-
 .subsection-title::after {
   content: '';
   position: absolute;
@@ -526,7 +501,6 @@ footer {
   background: linear-gradient(90deg, var(--bright-purple), var(--bright-blue));
   border-radius: 2px;
 }
-
 .education-subsection .education-timeline {
   padding: 0 2rem 2rem;
   position: relative;
@@ -841,10 +815,6 @@ footer {
   text-align: center;
 }
 
-.education-description {
-  margin-bottom: 1.5rem;
-}
-
 .education-description p {
   color: rgba(245, 245, 245, 0.8);
   line-height: 1.6;
@@ -939,118 +909,6 @@ footer {
   }
 }
 
-/* Tablet Landscape (768px - 1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .education-timeline {
-    flex-direction: column;
-    gap: 2.5rem;
-    padding: 1.5rem 0;
-  }
-  
-  .education-timeline::before {
-    top: 0;
-    left: 50%;
-    bottom: 0;
-    width: 3px;
-    height: auto;
-    transform: translateX(-50%);
-  }
-  
-  .education-item {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  .education-item::before {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .education-content {
-    max-width: 100%;
-    padding: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .education-header {
-    flex-direction: row;
-    text-align: left;
-    gap: 1rem;
-  }
-  
-  .education-meta {
-    align-items: flex-start;
-  }
-  
-  .education-title,
-  .education-institution,
-  .education-description p {
-    text-align: left;
-  }
-  
-  .education-skills {
-    justify-content: flex-start;
-  }
-  
-  .cert-item {
-    justify-content: flex-start;
-  }
-}
-
-/* Tablet Portrait (481px - 768px) */
-@media (max-width: 768px) and (min-width: 481px) {
-  .education-timeline {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 0;
-  }
-  
-  .education-timeline::before {
-    top: 0;
-    left: 30px;
-    bottom: 0;
-    width: 3px;
-    height: auto;
-    transform: none;
-  }
-  
-  .education-item {
-    width: 100%;
-    padding-left: 60px;
-  }
-  
-  .education-item::before {
-    top: 0;
-    left: 30px;
-    transform: translate(-50%, -50%);
-  }
-  
-  .education-content {
-    max-width: 100%;
-    padding: 1.25rem;
-    margin-top: 1.5rem;
-  }
-  
-  .subsection-title {
-    font-size: 1.8rem;
-    margin: 1.5rem 0 2rem;
-  }
-  
-  .education-title {
-    font-size: 1.2rem;
-  }
-  
-  .education-description p {
-    font-size: 0.9rem;
-  }
-  
-  .skill-tag {
-    font-size: 0.8rem;
-  }
-}
-
 /* Mobile Landscape (481px - 767px) */
 @media (max-width: 767px) and (min-width: 481px) {
   .education-subsection {
@@ -1117,17 +975,13 @@ footer {
   }
   
   .education-title {
-    font-size: 1rem;
+    font-size: 0.25rem;
     margin-bottom: 0.25rem;
   }
   
   .education-institution {
-    font-size: 0.85rem;
+    font-size: 0.25rem;
     margin-bottom: 0.75rem;
-  }
-  
-  .education-description {
-    margin-bottom: 1rem;
   }
   
   .education-description p {
@@ -1166,30 +1020,6 @@ footer {
     font-size: 0.8rem;
   }
 }
-
-/* Extra Small Mobile (320px and below) */
-@media (max-width: 320px) {
-  .education-subsection .education-timeline {
-    padding: 0 0.5rem 0.5rem;
-  }
-  
-  .education-content {
-    padding: 0.75rem;
-  }
-  
-  .subsection-title {
-    font-size: 1.3rem;
-  }
-  
-  .education-title {
-    font-size: 0.95rem;
-  }
-  
-  .education-description p {
-    font-size: 0.75rem;
-  }
-}
-
 
 /* Projects Section */
 .projects {

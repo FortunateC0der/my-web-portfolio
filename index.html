@@ -68,6 +68,108 @@
             </p>
           </div>
         </div>
+        
+        <!-- Clickable Arrow -->
+        <div class="education-toggle" onclick="toggleEducation()" role="button" tabindex="0" onkeydown="handleKeyPress(event)">
+          <div class="arrow-container">
+            <div class="arrow-icon">
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <span class="arrow-text">View My Education</span>
+          </div>
+        </div>
+        
+        <!-- Education Subsection -->
+        <div id="education-subsection" class="education-subsection">
+          <h3 class="subsection-title">Education & Certifications</h3>
+          <div class="education-timeline">
+            <div class="education-item" data-year="2024">
+              <div class="education-content">
+                <div class="education-header">
+                  <div class="education-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="education-meta">
+                    <span class="education-year">2024</span>
+                    <span class="education-type">Certification</span>
+                  </div>
+                </div>
+                <h3 class="education-title">Certified Java Developer</h3>
+                <p class="education-institution">GoFourth Institute of Technology</p>
+                <div class="education-description">
+                  <p>Advanced Java programming certification covering Spring Boot, microservices architecture, and enterprise development patterns.</p>
+                </div>
+                <div class="education-skills">
+                  <span class="skill-tag">Java</span>
+                  <span class="skill-tag">Spring Boot</span>
+                  <span class="skill-tag">Microservices</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-item" data-year="2021">
+              <div class="education-content">
+                <div class="education-header">
+                  <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div class="education-meta">
+                    <span class="education-year">2021</span>
+                    <span class="education-type">Diploma</span>
+                  </div>
+                </div>
+                <h3 class="education-title">Diploma in IT: Business Applications</h3>
+                <p class="education-institution">Tshwane University of Technology</p>
+                <div class="education-description">
+                  <p>Comprehensive IT diploma focusing on business application development, database management, and software engineering principles.</p>
+                </div>
+                <div class="education-skills">
+                  <span class="skill-tag">Software Engineering</span>
+                  <span class="skill-tag">Database Design</span>
+                  <span class="skill-tag">Business Analysis</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-item" data-year="2023-2024">
+              <div class="education-content">
+                <div class="education-header">
+                  <div class="education-icon">
+                    <i class="fab fa-microsoft"></i>
+                  </div>
+                  <div class="education-meta">
+                    <span class="education-year">2023-2024</span>
+                    <span class="education-type">Certifications</span>
+                  </div>
+                </div>
+                <h3 class="education-title">Microsoft Cloud Certifications</h3>
+                <p class="education-institution">Microsoft Learning</p>
+                <div class="education-description">
+                  <p>Professional certifications in Azure cloud services, AI engineering, and Power Platform development.</p>
+                </div>
+                <div class="certification-list">
+                  <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Azure AI Engineer Associate (AI-102)</span>
+                  </div>
+                  <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Developing Solutions for Microsoft Azure (AZ-204)</span>
+                  </div>
+                  <div class="cert-item">
+                    <i class="fas fa-certificate"></i>
+                    <span>Power Platform Fundamentals (PL-900)</span>
+                  </div>
+                </div>
+                <div class="education-skills">
+                  <span class="skill-tag">Azure</span>
+                  <span class="skill-tag">AI/ML</span>
+                  <span class="skill-tag">Power Platform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -129,32 +231,6 @@
               </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section main-section">
-      <h2 class="section-title">Education</h2>
-      <div class="education-cards">
-        <div class="education-card">
-          <div class="card-icon"><i class="fas fa-certificate"></i></div>
-          <h3>Certified Java Developer</h3>
-          <p>GoFourth Institute of Technology, 2024</p>
-        </div>
-        <div class="education-card">
-          <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
-          <h3>Diploma in IT: Business Applications</h3>
-          <p>Tshwane University of Technology, 2021</p>
-        </div>
-        <div class="education-card">
-          <div class="card-icon"><i class="fas fa-cloud"></i></div>
-          <h3>Microsoft Certifications</h3>
-          <p>
-            Azure AI Engineer Associate (AI-102),
-            Developing Solutions for Microsoft Azure (AZ-204),
-            Power Platform Fundamentals (PL-900)
-          </p>
         </div>
       </div>
     </section>
@@ -246,7 +322,36 @@
   <!-- Include Script -->
   <script src="include.js"></script>
 
+  <!-- Education Toggle Script -->
+  <script>
+    function toggleEducation() {
+      const educationSubsection = document.getElementById('education-subsection');
+      const arrowIcon = document.querySelector('.arrow-icon i');
+      const arrowText = document.querySelector('.arrow-text');
+      
+      if (educationSubsection.classList.contains('expanded')) {
+        // Collapse
+        educationSubsection.classList.remove('expanded');
+        educationSubsection.style.maxHeight = '0';
+        arrowIcon.style.transform = 'rotate(0deg)';
+        arrowText.textContent = 'View My Education';
+      } else {
+        // Expand
+        educationSubsection.classList.add('expanded');
+        educationSubsection.style.maxHeight = educationSubsection.scrollHeight + 'px';
+        arrowIcon.style.transform = 'rotate(180deg)';
+        arrowText.textContent = 'Hide Education';
+      }
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleEducation();
+      }
+    }
+  </script>
+
 </body>
 
 </html>
-```
